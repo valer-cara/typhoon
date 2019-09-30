@@ -20,5 +20,6 @@ module "workers" {
   cluster_domain_suffix = var.cluster_domain_suffix
   clc_snippets          = var.worker_clc_snippets
   node_labels           = var.worker_node_labels
+  asg_tags              = var.worker_asg_tags
 }
 

@@ -160,3 +160,9 @@ variable "cluster_domain_suffix" {
   default = "cluster.local"
 }
 
+variable "worker_asg_tags" {
+  description = "List of tags to add to worker autoscaling group"
+  type = list
+  default = []
+}
+

@@ -108,3 +108,10 @@ variable "node_labels" {
   description = "List of initial node labels"
   default = []
 }
+
+variable "asg_tags" {
+  description = "List of additional tags to add to worker autoscaling group"
+  type = list
+  default = []
+}
+
