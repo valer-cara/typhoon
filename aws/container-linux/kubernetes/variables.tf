@@ -146,6 +146,12 @@ variable "enable_aggregation" {
   default = false
 }
 
+variable "worker_node_taints" {
+  description = "Taints to add to worker"
+  type = string
+  default = ""
+}
+
 variable "worker_node_labels" {
   type = list(string)
   description = "List of initial worker node labels"

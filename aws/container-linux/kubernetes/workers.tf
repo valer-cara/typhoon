@@ -19,6 +19,7 @@ module "workers" {
   service_cidr          = var.service_cidr
   cluster_domain_suffix = var.cluster_domain_suffix
   clc_snippets          = var.worker_clc_snippets
+  node_taints           = var.worker_node_taints
   node_labels           = var.worker_node_labels
   asg_tags              = var.worker_asg_tags
 }

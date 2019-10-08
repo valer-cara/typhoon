@@ -64,6 +64,9 @@ systemd:
           %{ for label in split(",", node_labels) }
           --node-labels=${label} \
           %{ endfor ~}
+          %{ if node_taints != "" }
+          --register-with-taints=${node_taints} \
+          %{ endif }
           --pod-manifest-path=/etc/kubernetes/manifests \
           --read-only-port=0 \
           --volume-plugin-dir=/var/lib/kubelet/volumeplugins

@@ -103,6 +103,12 @@ variable "cluster_domain_suffix" {
   default = "cluster.local"
 }
 
+variable "node_taints" {
+  type = string
+  description = "Taints to add to worker"
+  default = ""
+}
+
 variable "node_labels" {
   type = list(string)
   description = "List of initial node labels"
