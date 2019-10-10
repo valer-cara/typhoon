@@ -1,6 +1,6 @@
 # Kubernetes assets (kubeconfig, manifests)
 module "bootstrap" {
-  source = "git::https://github.com/poseidon/terraform-render-bootstrap.git?ref=10d9cec5c256f4622712bf01448df1a2befc37c8"
+  source = "git::https://github.com/valer-cara/terraform-render-bootstrap.git?ref=alethio-custom"
 
   cluster_name          = var.cluster_name
   api_servers           = [format("%s.%s", var.cluster_name, var.dns_zone)]
@@ -13,5 +13,6 @@ module "bootstrap" {
   cluster_domain_suffix = var.cluster_domain_suffix
   enable_reporting      = var.enable_reporting
   enable_aggregation    = var.enable_aggregation
+  feature_gates         = var.feature_gates
 }
 

@@ -146,6 +146,12 @@ variable "enable_aggregation" {
   default = false
 }
 
+variable "feature_gates" {
+  description = "Feature gates"
+  type = list(string)
+  default = []
+}
+
 variable "worker_node_taints" {
   description = "Taints to add to worker"
   type = string
